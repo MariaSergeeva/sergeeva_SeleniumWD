@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class MyFirstTest {
+public class TestLogin {
   private WebDriver driver;
   private WebDriverWait wait;
 
@@ -25,18 +25,12 @@ public class MyFirstTest {
   }
 
   @Test
-  public void myFirstTest(){
-    driver.get("http://www.google.com/");
-    driver.findElement(By.name("q")).sendKeys("webdriver");
-    driver.findElement(By.xpath("//input[@value='Поиск в Google']")).click();
-    wait.until(titleIs("webdriver - Поиск в Google"));
-  }
-
-  @Test
-  public void myTest(){
-    driver.get("https://www.google.ru/maps/");
-    driver.findElement(By.xpath("//button[@aria-label='Как добраться']")).click();
-    wait.until(visibilityOfElementLocated(By.xpath("//div[@class='widget-directions-waypoints']")));
+  public void myTestLogin(){
+    driver.get("http://localhost/litecart/admin/login.php");
+    driver.findElement(By.xpath("//input[@name='username']")).sendKeys("admin");
+    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin");
+    driver.findElement(By.xpath("//button[@name='login']")).click();
+    wait.until(visibilityOfElementLocated(By.xpath("//img[@title='My Store']")));
   }
 
 

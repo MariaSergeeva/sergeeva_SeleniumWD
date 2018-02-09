@@ -1,29 +1,9 @@
 package ru.stqa.training.selenium;
-
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.concurrent.TimeUnit;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class TestLogin {
-  private WebDriver driver;
-  private WebDriverWait wait;
-
-  @Before
-  public void start(){
-    driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    wait = new WebDriverWait(driver, 10);
-  }
-
+public class TestLogin extends TestBase{
   @Test
   public void myTestLogin(){
     driver.get("http://localhost/litecart/admin/login.php");
@@ -31,12 +11,5 @@ public class TestLogin {
     driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin");
     driver.findElement(By.xpath("//button[@name='login']")).click();
     wait.until(visibilityOfElementLocated(By.xpath("//img[@title='My Store']")));
-  }
-
-
-  @After
-  public void stop(){
-    driver.quit();
-    driver = null;
   }
 }

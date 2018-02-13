@@ -1,10 +1,8 @@
 package ru.stqa.training.selenium;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-
-import java.util.List;
-
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class lesson3 extends TestBase {
@@ -34,4 +32,38 @@ public class lesson3 extends TestBase {
       i++;
     }
   }
+
+  @Test
+  public void stickers(){
+    driver.get("http://localhost/litecart");
+
+    int mostPopularProducts = driver.findElements(By.xpath("//div[@id = 'box-most-popular']//li")).size();
+    int x = 1;
+    while (x<=mostPopularProducts){
+      String locator = "//div[@id = 'box-most-popular']//li[%s]";
+      Assert.assertTrue(areElementsPresent(locator, x));
+      x++;
+    }
+
+    int campaignsProducts = driver.findElements(By.xpath("//div[@id = 'box-campaigns']//li")).size();
+    int y = 1;
+    while (y<=campaignsProducts){
+      String locator = "//div[@id = 'box-campaigns']//li[%s]";
+      Assert.assertTrue(areElementsPresent(locator, y));
+      y++;
+    }
+
+    int latestProducts = driver.findElements(By.xpath("//div[@id = 'box-latest-products']//li")).size();
+    int z = 1;
+    while (z<=latestProducts){
+      String locator = "//div[@id = 'box-latest-products']//li[%s]";
+      Assert.assertTrue(areElementsPresent(locator, z));
+      z++;
+    }
+  }
+
+  public boolean areElementsPresent(String locator, int i) {
+    return driver.findElements(By.xpath(String.format(locator, i))).size() == 1;
+  }
+
 }

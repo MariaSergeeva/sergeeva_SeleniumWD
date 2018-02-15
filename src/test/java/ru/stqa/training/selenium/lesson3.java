@@ -3,6 +3,11 @@ package ru.stqa.training.selenium;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+
+import java.lang.reflect.Array;
+import java.util.List;
+
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class lesson3 extends TestBase {
@@ -36,34 +41,28 @@ public class lesson3 extends TestBase {
   @Test
   public void stickers(){
     driver.get("http://localhost/litecart");
+    String[] sections = {"box-most-popular", "box-campaigns", "box-latest-products"};
 
-    int mostPopularProducts = driver.findElements(By.xpath("//div[@id = 'box-most-popular']//li")).size();
-    int x = 1;
-    while (x<=mostPopularProducts){
-      String locator = "//div[@id = 'box-most-popular']//li[%s]";
-      Assert.assertTrue(areElementsPresent(locator, x));
-      x++;
-    }
-
-    int campaignsProducts = driver.findElements(By.xpath("//div[@id = 'box-campaigns']//li")).size();
-    int y = 1;
-    while (y<=campaignsProducts){
-      String locator = "//div[@id = 'box-campaigns']//li[%s]";
-      Assert.assertTrue(areElementsPresent(locator, y));
-      y++;
-    }
-
-    int latestProducts = driver.findElements(By.xpath("//div[@id = 'box-latest-products']//li")).size();
-    int z = 1;
-    while (z<=latestProducts){
-      String locator = "//div[@id = 'box-latest-products']//li[%s]";
-      Assert.assertTrue(areElementsPresent(locator, z));
-      z++;
+    for (int i = 0; i < sections.length; i++){
+      String locator = String.format("//div[@id = '%s']//li", sections[i]);
+      int mostPopularProducts = driver.findElements(By.xpath(locator)).size();
+      int j = 1;
+      while (j<=mostPopularProducts){
+        String subLocator = String.format("//div[@id = '%s']//li[%s]//div[contains(@class, 'sticker')]", sections[i], j);
+        Assert.assertTrue(isElementPresent(subLocator));
+        j++;
+      }
     }
   }
 
-  public boolean areElementsPresent(String locator, int i) {
-    return driver.findElements(By.xpath(String.format(locator, i))).size() == 1;
+  public boolean isElementPresent(String locator) {
+    try {
+      driver.findElement(By.xpath(locator));
+      return true;
+    } catch (NoSuchElementException ex) {
+      return false;
+    }
   }
+
 
 }

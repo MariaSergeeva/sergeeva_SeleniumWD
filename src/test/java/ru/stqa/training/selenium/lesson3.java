@@ -45,9 +45,9 @@ public class lesson3 extends TestBase {
 
     for (int i = 0; i < sections.length; i++){
       String locator = String.format("//div[@id = '%s']//li", sections[i]);
-      int mostPopularProducts = driver.findElements(By.xpath(locator)).size();
+      int productsCount = driver.findElements(By.xpath(locator)).size();
       int j = 1;
-      while (j<=mostPopularProducts){
+      while (j<=productsCount){
         String subLocator = String.format("//div[@id = '%s']//li[%s]//div[contains(@class, 'sticker')]", sections[i], j);
         Assert.assertTrue(isElementPresent(subLocator));
         j++;

@@ -30,6 +30,12 @@ public class TestBase {
             new Thread(() -> { driver.quit(); driver = null; }));
   }
 
+  public void login(){
+    driver.get("http://localhost/litecart/admin/login.php");
+    driver.findElement(By.xpath("//input[@name='username']")).sendKeys("admin");
+    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin");
+    driver.findElement(By.xpath("//button[@name='login']")).click();
+  }
 //    @Before
 //  public void start(){
 //    //запуск браузера Chrome с дополнительными настройками

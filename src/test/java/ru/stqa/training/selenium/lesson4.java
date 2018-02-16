@@ -10,14 +10,9 @@ import java.util.List;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class lesson3 extends TestBase {
+public class lesson4 extends TestBase {
 
-  public void login(){
-    driver.get("http://localhost/litecart/admin/login.php");
-    driver.findElement(By.xpath("//input[@name='username']")).sendKeys("admin");
-    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin");
-    driver.findElement(By.xpath("//button[@name='login']")).click();
-  }
+
   @Test
   public void menu(){
     login();

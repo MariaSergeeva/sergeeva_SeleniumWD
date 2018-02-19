@@ -44,19 +44,14 @@ public class lesson4 extends TestBase {
       int j = 1;
       while (j<=productsCount){
         String subLocator = String.format("//div[@id = '%s']//li[%s]//div[contains(@class, 'sticker')]", sections[i], j);
-        Assert.assertTrue(isElementPresent(subLocator));
+        Assert.assertTrue(isThereOnlyOneSticker(subLocator));
         j++;
       }
     }
   }
 
-  public boolean isElementPresent(String locator) {
-    try {
-      driver.findElement(By.xpath(locator));
-      return true;
-    } catch (NoSuchElementException ex) {
-      return false;
-    }
+  boolean isThereOnlyOneSticker(String locator) {
+    return driver.findElements(By.xpath(locator)).size() ==1;
   }
 
 

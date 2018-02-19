@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcf36d9d-4db8-4c44-ac26-f01b2d0c9b84" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson5.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson5.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -84,23 +84,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lesson4.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lesson4.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="452">
+              <caret line="53" column="61" lean-forward="true" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1809#1810#0" expanded="true" />
+                <element signature="e#1875#1876#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lesson5.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lesson5.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="112">
+              <caret line="53" column="106" lean-forward="true" selection-start-line="53" selection-start-column="106" selection-end-line="53" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -443,9 +445,9 @@
         <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/Assert.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson3.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson5.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java" />
       </list>
     </option>
   </component>
@@ -539,7 +541,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.lesson5.countries">
+  <component name="RunManager" selected="JUnit.lesson4.stickers">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -754,10 +756,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.lesson5.countries" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.lesson5" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.lesson5.menu" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.lesson4.stickers" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.lesson4.stickers" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.lesson5.countries" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.lesson5" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.lesson5.menu" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.lesson4.zzz" />
       </list>
     </recent_temporary>
@@ -776,26 +778,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="lesson5_countries - 2018.02.19 at 09h 16m 13s.xml">
-      <configuration name="lesson5.countries" configurationId="JUnit" />
+    <history-entry file="lesson4_stickers - 2018.02.19 at 10h 32m 59s.xml">
+      <configuration name="lesson4.stickers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson5_countries - 2018.02.19 at 09h 16m 42s.xml">
-      <configuration name="lesson5.countries" configurationId="JUnit" />
+    <history-entry file="lesson4_stickers - 2018.02.19 at 10h 33m 30s.xml">
+      <configuration name="lesson4.stickers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson5_countries - 2018.02.19 at 09h 17m 23s.xml">
-      <configuration name="lesson5.countries" configurationId="JUnit" />
+    <history-entry file="lesson4_stickers - 2018.02.19 at 10h 39m 21s.xml">
+      <configuration name="lesson4.stickers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson5_countries - 2018.02.19 at 09h 23m 15s.xml">
-      <configuration name="lesson5.countries" configurationId="JUnit" />
+    <history-entry file="lesson4_stickers - 2018.02.19 at 10h 42m 39s.xml">
+      <configuration name="lesson4.stickers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson5_countries - 2018.02.19 at 09h 24m 11s.xml">
-      <configuration name="lesson5.countries" configurationId="JUnit" />
+    <history-entry file="lesson4_stickers - 2018.02.19 at 10h 43m 11s.xml">
+      <configuration name="lesson4.stickers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson5_countries - 2018.02.19 at 09h 25m 07s.xml">
-      <configuration name="lesson5.countries" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="lesson5_countries - 2018.02.19 at 10h 17m 08s.xml">
-      <configuration name="lesson5.countries" configurationId="JUnit" />
+    <history-entry file="lesson4_stickers - 2018.02.19 at 10h 48m 06s.xml">
+      <configuration name="lesson4.stickers" configurationId="JUnit" />
     </history-entry>
     <history-entry file="lesson5_countries - 2018.02.19 at 10h 20m 22s.xml">
       <configuration name="lesson5.countries" configurationId="JUnit" />
@@ -804,6 +803,9 @@
       <configuration name="lesson5.countries" configurationId="JUnit" />
     </history-entry>
     <history-entry file="lesson5_countries - 2018.02.19 at 10h 25m 32s.xml">
+      <configuration name="lesson5.countries" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="lesson5_countries - 2018.02.19 at 10h 32m 50s.xml">
       <configuration name="lesson5.countries" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -882,7 +884,7 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -931,6 +933,8 @@
           <caret line="17" column="12" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="17" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1063,6 +1067,8 @@
           <caret line="71" column="2" lean-forward="false" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1135,16 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="17" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1167,10 +1163,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="112">
+          <caret line="53" column="106" lean-forward="true" selection-start-line="53" selection-start-column="106" selection-end-line="53" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="53" column="61" lean-forward="true" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
           </folding>
         </state>
       </provider>

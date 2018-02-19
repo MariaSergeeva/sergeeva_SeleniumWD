@@ -3,9 +3,6 @@ package ru.stqa.training.selenium;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class lesson5 extends TestBase {
@@ -29,21 +26,13 @@ public class lesson5 extends TestBase {
     Arrays.sort(countriesByAlphabet);
     Assert.assertTrue(arraysCompare(countries, countriesByAlphabet));
 
-    ArrayList indexes = new ArrayList();
-    int j = 0;
-    while (j < zonesCounts.length){
-      if (zonesCounts[j] != 0){
-        int index = j+1;
-        indexes.add(index);
-      }
-      j++;
-    }
+    driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
+    int countriesWithGeozones = driver.findElements(By.xpath("//form[@name='geo_zones_form']//tr[@class='row']")).size();
 
     int k = 0;
-    while (k<indexes.size()){
-      int count1 = (int) indexes.get(k);
-      count1 = count1 + 1;
-      String locator1 = String.format("table.dataTable tr:nth-of-type(%s) a:not([title = Edit])", count1);
+    while (k<countriesWithGeozones){
+      int count1 = k + 2;
+      String locator1 = String.format("form[name = geo_zones_form] tr:nth-of-type(%s) a:not([title = Edit])", count1);
       driver.findElement(By.cssSelector(locator1)).click();
       String locator2 = "table.dataTable tr:not([class = header]) a#remove-zone";
       int zonesCount = driver.findElements(By.cssSelector(locator2)).size();
@@ -51,7 +40,6 @@ public class lesson5 extends TestBase {
       int l = 0;
       while (l<zonesCount){
         int count2 = l+2;
-       // String locator4 = String.format("table.dataTable tr:nth-of-type(%s) td:nth-of-type(3)", count2);
         String locator4 = String.format("table.dataTable tr:nth-of-type(%s) td:nth-of-type(3)", count2);
         zones[l] = driver.findElement(By.cssSelector(locator4)).getAttribute("textContent");
         l++;
@@ -59,9 +47,12 @@ public class lesson5 extends TestBase {
       String[] zonesByAlphabet = zones;
       Arrays.sort(zonesByAlphabet);
       Assert.assertTrue(arraysCompare(zones, zonesByAlphabet));
-      driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
+      driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
       k++;
     }
+
+
+
 
 
   }

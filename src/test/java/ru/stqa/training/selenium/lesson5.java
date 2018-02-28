@@ -3,7 +3,10 @@ package ru.stqa.training.selenium;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class lesson5 extends TestBase {
   @Test
@@ -50,15 +53,71 @@ public class lesson5 extends TestBase {
       driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
       k++;
     }
-
-
-
-
-
   }
   public boolean arraysCompare(String[] countries, String[] countriesByAlphabet) {
     return Arrays.equals(countries, countriesByAlphabet);
   }
 
+  @Test
+  public void duck(){
+    login();
+    driver.get("http://localhost/litecart");
+    String locator = "//div[@id = 'box-campaigns']//li[1]//a[@class = 'link'] %s";
+    String mainPageName = driver.findElement(By.xpath(String.format(locator, "//div[@class = 'name']"))).getAttribute("textContent");
+    String mainPageRegularPriceText = driver.findElement(By.xpath(String.format(locator, "//div[@class = 'price-wrapper']/s[@class = 'regular-price']"))).getAttribute("textContent");
+    String mainPageRegularPriceColor = driver.findElement(By.xpath(String.format(locator, "//div[@class = 'price-wrapper']/s[@class = 'regular-price']"))).getCssValue("color");
+    String mainPageRegularPriceStyle = driver.findElement(By.xpath(String.format(locator, "//div[@class = 'price-wrapper']/s[@class = 'regular-price']"))).getCssValue("font-size");
+    String mainPageCampaignPriceText = driver.findElement(By.xpath(String.format(locator, "//div[@class = 'price-wrapper']/strong[@class = 'campaign-price']"))).getAttribute("textContent");
+    String mainPageCampaignPriceColor = driver.findElement(By.xpath(String.format(locator, "//div[@class = 'price-wrapper']/strong[@class = 'campaign-price']"))).getCssValue("color");
+    String mainPageCampaignPriceStyle = driver.findElement(By.xpath(String.format(locator, "//div[@class = 'price-wrapper']/strong[@class = 'campaign-price']"))).getCssValue("font-size");
 
+    List mainPageRegularPriceColors = getColorParts(mainPageRegularPriceColor);
+    Assert.assertTrue(mainPageRegularPriceColors.get(0).equals(mainPageRegularPriceColors.get(1)));
+    Assert.assertTrue(mainPageRegularPriceColors.get(0).equals(mainPageRegularPriceColors.get(2)));
+
+    List mainPageCampaignPriceColors = getColorParts(mainPageCampaignPriceColor);
+    Assert.assertFalse(mainPageCampaignPriceColors.get(0).equals("0"));
+    Assert.assertTrue(mainPageCampaignPriceColors.get(1).equals("0"));
+    Assert.assertTrue(mainPageCampaignPriceColors.get(2).equals("0"));
+
+    // доделать проверки стиля - зачеркнуто, размер
+
+
+    driver.findElement(By.xpath(String.format(locator, ""))).click();
+    String duckPageName = driver.findElement(By.xpath("//div[@id = 'box-product']//h1[@class = 'title']")).getAttribute("textContent");
+    String locator2 = "//div[@id = 'box-product']//div[@class = 'information'] %s";
+    String duckPageRegularPriceText = driver.findElement(By.xpath(String.format(locator2, "//div[@class = 'price-wrapper']/s[@class = 'regular-price']"))).getAttribute("textContent");
+    String duckPageRegularPriceColor = driver.findElement(By.xpath(String.format(locator2, "//div[@class = 'price-wrapper']/s[@class = 'regular-price']"))).getCssValue("color");
+    String duckPageRegularPriceStyle = driver.findElement(By.xpath(String.format(locator2, "//div[@class = 'price-wrapper']/s[@class = 'regular-price']"))).getCssValue("font-size");
+    String duckPageCampaignPriceText = driver.findElement(By.xpath(String.format(locator2, "//div[@class = 'price-wrapper']/strong[@class = 'campaign-price']"))).getAttribute("textContent");
+    String duckPageCampaignPriceColor = driver.findElement(By.xpath(String.format(locator2, "//div[@class = 'price-wrapper']/strong[@class = 'campaign-price']"))).getCssValue("color");
+    String duckPageCampaignPriceStyle = driver.findElement(By.xpath(String.format(locator2, "//div[@class = 'price-wrapper']/strong[@class = 'campaign-price']"))).getCssValue("font-size");
+
+    Assert.assertTrue(mainPageName.equals(duckPageName));
+    Assert.assertTrue(mainPageCampaignPriceText.equals(duckPageCampaignPriceText));
+    Assert.assertTrue(mainPageRegularPriceText.equals(duckPageRegularPriceText));
+
+    List duckPageRegularPriceColors = getColorParts(duckPageRegularPriceColor);
+    Assert.assertTrue(duckPageRegularPriceColors.get(0).equals(duckPageRegularPriceColors.get(1)));
+    Assert.assertTrue(duckPageRegularPriceColors.get(0).equals(duckPageRegularPriceColors.get(2)));
+
+    List duckPageCampaignPriceColors = getColorParts(duckPageCampaignPriceColor);
+    Assert.assertFalse(duckPageCampaignPriceColors.get(0).equals("0"));
+    Assert.assertTrue(duckPageCampaignPriceColors.get(1).equals("0"));
+    Assert.assertTrue(duckPageCampaignPriceColors.get(2).equals("0"));
+
+    // доделать проверки стиля - зачеркнуто, размер
+
+  }
+
+  public ArrayList getColorParts(String colorString){
+    colorString = colorString.replace("rgba(", "");
+    colorString = colorString.replace(")", "");
+    colorString = colorString.replace(" ", "");
+    ArrayList list = new ArrayList();
+    for (String color : colorString.split(",")) {
+      list.add(color);
+    }
+    return list;
+  }
 }

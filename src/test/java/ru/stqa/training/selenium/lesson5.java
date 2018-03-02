@@ -77,7 +77,7 @@ public class lesson5 extends TestBase {
       int l = 0;
       while (l<zonesCount){
         int count2 = l+2;
-        String locator4 = String.format("table.dataTable tr:nth-of-type(%s) td:nth-of-type(3)", count2);
+        String locator4 = String.format("table.dataTable tr:nth-of-type(%s) td:nth-of-type(3) option[selected = selected]", count2);
         zones[l] = driver.findElement(By.cssSelector(locator4)).getAttribute("textContent");
         l++;
       }

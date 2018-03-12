@@ -1,4 +1,5 @@
 package ru.stqa.training.selenium;
+import net.lightbody.bmp.core.har.Har;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -16,8 +17,14 @@ public class MyFirstTest extends TestBase{
 
   @Test
   public void myTest(){
+//    proxy.newHar();
     driver.get("https://www.google.ru/maps/");
+//    System.out.println(driver.manage().logs().getAvailableLogTypes());
+//    driver.manage().logs().get("browser").forEach(l -> System.out.println(l));
+//    driver.manage().logs().get("performance").forEach(l -> System.out.println(l));
     driver.findElement(By.xpath("//button[@aria-label='Как добраться']")).click();
     wait.until(visibilityOfElementLocated(By.xpath("//div[@class='widget-directions-waypoints']")));
+//    Har har = proxy.endHar();
+//    har.getLog().getEntries().forEach(l -> System.out.println(l.getResponse().getStatus() + ":" + l.getRequest().getUrl()));
   }
 }

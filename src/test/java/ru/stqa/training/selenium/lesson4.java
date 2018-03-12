@@ -34,24 +34,28 @@ public class lesson4 extends TestBase {
   }
 
   @Test
-  public void stickers(){
+  public void stickers() {
     driver.get("http://localhost/litecart");
     String[] sections = {"box-most-popular", "box-campaigns", "box-latest-products"};
 
-    for (int i = 0; i < sections.length; i++){
-      String locator = String.format("//div[@id = '%s']//li", sections[i]);
-      int productsCount = driver.findElements(By.xpath(locator)).size();
-      int j = 1;
-      while (j<=productsCount){
-        String subLocator = String.format("//div[@id = '%s']//li[%s]//div[contains(@class, 'sticker')]", sections[i], j);
-        Assert.assertTrue(isThereOnlyOneSticker(subLocator));
+    for (int i = 0; i < sections.length; i++) {
+      String locator = String.format("div#%s li.product", sections[i]);
+      int productscount = driver.findElements(By.cssSelector(locator)).size();
+      System.out.println("- товаров в категории " + sections[i] + ": " + productscount);
+      int j = 0;
+      while (j < productscount) {
+        int count = j+1;
+        String subLocator = String.format("div#%s li.product:nth-of-type(%s) div.sticker", sections[i], count);
+        Assert.assertTrue(isThereOnlyOneSticker(locator));
+        System.out.println("- стикеров для товара №" + count + " в категории " + sections[i] + ": " + driver.findElements(By.cssSelector(subLocator)).size());
         j++;
+
       }
     }
   }
 
   boolean isThereOnlyOneSticker(String locator) {
-    return driver.findElements(By.xpath(locator)).size() ==1;
+    return driver.findElements(By.cssSelector(locator)).size() ==1;
   }
 
 

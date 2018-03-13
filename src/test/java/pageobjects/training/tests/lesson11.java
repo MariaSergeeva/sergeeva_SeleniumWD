@@ -1,10 +1,12 @@
 package pageobjects.training.tests;
 
 import com.tngtech.java.junit.dataprovider.DataProvider;
+import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.DataProviders;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,12 +14,15 @@ import ru.stqa.training.selenium.TestBase;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
+//@RunWith(DataProviderRunner.class)
 public class lesson11 extends NewTestBase {
+
   @Test
-  @UseDataProvider(value = "getProductsCount", location = DataProviders.class)
-  public void newCart(int productsCount) {
+  //указание, какие данные передавать в тест, при этом сам тест должен принимать на вход параметр
+  //@UseDataProvider(value = "newProvider", location = pageobjects.training.model.DataProviders.class)
+  public void newCart() {
     login();
-    addProductToCart(productsCount);
+    addProductToCart(3);
     goToCart();
     deleteAllProducts();
 

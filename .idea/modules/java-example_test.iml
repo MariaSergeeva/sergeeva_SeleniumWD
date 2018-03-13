@@ -12,6 +12,7 @@
     <orderEntry type="module" module-name="java-example_main" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.9.0" level="project" />
     <orderEntry type="library" name="Gradle: net.lightbody.bmp:browsermob-core:2.1.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.tngtech.java:junit-dataprovider:1.13.1" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:3.9.0" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.9.0" level="project" />

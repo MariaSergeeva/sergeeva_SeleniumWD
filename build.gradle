@@ -15,7 +15,9 @@ dependencies {
     compile ('net.lightbody.bmp:browsermob-core:2.1.5'){
         exclude module: 'selenium'
     }
-    }
+    compile 'com.tngtech.java:junit-dataprovider:1.13.1'
+
+}
 
 test {
     maxParallelForks = 10

@@ -22,7 +22,6 @@ public class Application {
 
   public void quit() {
     driver.quit();
-    driver = null;
   }
 
 

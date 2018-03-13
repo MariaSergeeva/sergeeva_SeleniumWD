@@ -1,17 +1,32 @@
 package pageobjects.training.tests;
 import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import pageobjects.training.app.Application;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Level;
 
 import static com.google.common.io.Files.copy;
 
 public class NewTestBase {
-  public Application app = new Application();
+  public static ThreadLocal<Application> tlApp = new ThreadLocal<>();
+  public Application app;
+
+  @Before
+  public void start(){
+    if(tlApp.get() != null){
+      app = tlApp.get();
+      return;
+    }
+    app = new Application();
+    tlApp.set(app);
+
+    Runtime.getRuntime().addShutdownHook(new Thread(() -> {app.quit(); app = null;}));
+  }
 
   public static class MyListener extends AbstractWebDriverEventListener {
     @Override
@@ -36,10 +51,5 @@ public class NewTestBase {
       }
       System.out.println(screen);
       }
-    }
-
-    @After
-    public void stop(){
-    app.quit();
     }
 }

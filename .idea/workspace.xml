@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcf36d9d-4db8-4c44-ac26-f01b2d0c9b84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/classes/pageobjects/training/app/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screen-1520931275994.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screen-1520931277060.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screen-1520931278079.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/pageobjects/training/app/Application.class" afterPath="$PROJECT_DIR$/out/test/classes/pageobjects/training/app/Application.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/pageobjects/training/tests/NewTestBase$MyListener.class" afterPath="$PROJECT_DIR$/out/test/classes/pageobjects/training/tests/NewTestBase$MyListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/pageobjects/training/tests/NewTestBase.class" afterPath="$PROJECT_DIR$/out/test/classes/pageobjects/training/tests/NewTestBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/pageobjects/training/tests/lesson11.class" afterPath="$PROJECT_DIR$/out/test/classes/pageobjects/training/tests/lesson11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -66,7 +61,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lesson11.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lesson11.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -76,12 +71,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1246">
-              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="289">
+              <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,15 +98,14 @@
       <file leaf-file-name="NewTestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="522">
+              <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
-                <element signature="e#576#577#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#702#703#0" expanded="true" />
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
-                <element signature="e#1242#1243#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="e#1121#1122#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -427,9 +425,9 @@
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/model/DataProviders.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java" />
       </list>
     </option>
   </component>
@@ -792,9 +790,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="lesson11_newCart - 2018.03.13 at 11h 31m 36s.xml">
-      <configuration name="lesson11.newCart" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="lesson11_newCart - 2018.03.13 at 11h 37m 04s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
@@ -820,6 +815,9 @@
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
     <history-entry file="lesson11_newCart - 2018.03.13 at 12h 23m 09s.xml">
+      <configuration name="lesson11.newCart" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="lesson11_newCart - 2018.03.13 at 12h 32m 03s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1288,18 +1286,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,19 +1302,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1246">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="522">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

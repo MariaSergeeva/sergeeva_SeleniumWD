@@ -9,7 +9,7 @@ public class LoginPage extends Pages {
     super(driver);
   }
 
-  public LoginPage open() {
+  public LoginPage openLoginPage() {
     driver.get("http://localhost/litecart/admin/login.php");
     return this;
   }

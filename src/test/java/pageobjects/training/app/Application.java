@@ -1,100 +1,84 @@
 package pageobjects.training.app;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobjects.training.model.Account;
-import pageobjects.training.pages.LoginPage;
-import pageobjects.training.pages.Pages;
+import pageobjects.training.pages.*;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.attributeContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.not;
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class Application {
   public EventFiringWebDriver driver;
   private WebDriverWait wait;
   private LoginPage loginPage;
+  private MainPage mainPage;
+  private ProductPage productPage;
+  private CartPage cartPage;
 
   public Application(){
     driver = new EventFiringWebDriver(new ChromeDriver());
     wait = new WebDriverWait(driver, 10);
     loginPage = new LoginPage(driver);
+    mainPage = new MainPage(driver);
+    productPage = new ProductPage(driver);
+    cartPage = new CartPage(driver);
   }
 
   public void quit() {
     driver.quit();
   }
 
-
-  public LoginPage loginPage() {
-    return loginPage;
-  }
-
-
   public void deleteAllProductsFromCart() {
-    String shortcutLocator = "ul.shortcuts li.shortcut:nth-of-type(1) a";
 
-    int typesCount = driver.findElements(By.xpath("//table[@class = 'dataTable rounded-corners']//td[@class = 'item']")).size();
+    int typesCount = cartPage.prodactsTypesInCart().size();
     while (typesCount > 1) {
-      driver.findElement(By.cssSelector(shortcutLocator)).click();
+      cartPage.shortcut().click();
       deleteProductFromCart();
-      typesCount = driver.findElements(By.xpath("//table[@class = 'dataTable rounded-corners']//td[@class = 'item']")).size();
+      typesCount = cartPage.prodactsTypesInCart().size();
     }
     if (typesCount == 1) {
       deleteProductFromCart();
     }
-    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id = 'checkout-cart-wrapper']//em")));
-    Assert.assertTrue(driver.findElement(By.xpath("//div[@id = 'checkout-cart-wrapper']//em")).getAttribute("textContent").equals("There are no items in your cart."));
+    wait.until(ExpectedConditions.visibilityOf(cartPage.emptyCart()));
+    Assert.assertTrue(cartPage.emptyCart().getAttribute("textContent").equals("There are no items in your cart."));
   }
 
   public void goToCart() {
-    driver.findElement(By.xpath("//div[@id = 'cart']//a[@class = 'link']")).click();
-    wait.until(visibilityOfElementLocated(By.xpath("//div[@id = 'box-checkout-cart']")));
+    productPage.cart().click();
+    wait.until(ExpectedConditions.visibilityOf(cartPage.removeButton()));
   }
 
   public void addProductToCart(int productsCount) {
     for (int i = 0; i < productsCount; i++) {
-      driver.get("http://localhost/litecart");
-      driver.findElement(By.cssSelector("div#box-most-popular a.link")).click();
+      mainPage.openMainPage().getFirstProduct().click();
+      wait.until(ExpectedConditions.visibilityOf(productPage.addButton()));
+      wait.until(ExpectedConditions.visibilityOf(productPage.productsInCartCount()));
 
-      String addButton = "//button[@type='submit'][@name='add_cart_product']";
-      String productsInCartCountLocator = "//div[@id = 'cart']//span[@class = 'quantity']";
-
-      wait.until(visibilityOfElementLocated(By.xpath(addButton)));
-      wait.until(visibilityOfElementLocated(By.xpath(productsInCartCountLocator)));
-
-      WebElement productsInCartCount = driver.findElement(By.xpath(productsInCartCountLocator));
-      String countString = productsInCartCount.getAttribute("textContent");
+      String countString = productPage.productsInCartCount().getAttribute("textContent");
       int count = Integer.parseInt(countString);
       System.out.println(count);
 
-      driver.findElement(By.xpath(addButton)).click();
-      wait.until(not(attributeContains(productsInCartCount, "textContent", countString)));
+      productPage.addButton().click();
+      wait.until(not(attributeContains(productPage.productsInCartCount(), "textContent", countString)));
 
-      int newCount = Integer.parseInt(driver.findElement(By.xpath(productsInCartCountLocator)).getAttribute("textContent"));
+      int newCount = Integer.parseInt(productPage.productsInCartCount().getAttribute("textContent"));
       Assert.assertEquals(newCount, count + 1);
       System.out.println(newCount);
     }
   }
 
   public void deleteProductFromCart() {
-    String productsInOrderCountLocator = "div#order_confirmation-wrapper tbody tr:nth-of-type(2) td:nth-of-type(1)";
-    WebElement productsInOrderCount = driver.findElement(By.cssSelector(productsInOrderCountLocator));
-    int count = Integer.parseInt(productsInOrderCount.getAttribute("textContent"));
+    String count = cartPage.firstTypeProdactsCount().getAttribute("textContent");
     System.out.println(count);
 
-    String removeLocator = "//button[@type = 'submit'][@name = 'remove_cart_item']";
-    driver.findElement(By.xpath(removeLocator)).click();
-    wait.until(ExpectedConditions.stalenessOf(productsInOrderCount));
-    System.out.println(0);
+    cartPage.removeButton().click();
+    wait.until(ExpectedConditions.stalenessOf(cartPage.firstTypeProdactsCount()));
   }
   public void login(){
     Account account = new Account().admin();
-    loginPage.open().enterUsername(account.getUsername()).enterPassword(account.getPassword()).submitLogin();
+    loginPage.openLoginPage().enterUsername(account.getUsername()).enterPassword(account.getPassword()).submitLogin();
   }
 }

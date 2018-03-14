@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageobjects.training.model.Account;
 import pageobjects.training.pages.LoginPage;
 import pageobjects.training.pages.Pages;
 
@@ -93,6 +94,7 @@ public class Application {
     System.out.println(0);
   }
   public void login(){
-    loginPage.open().enterUsername("admin").enterPassword("admin").submitLogin();
+    Account account = new Account().admin();
+    loginPage.open().enterUsername(account.getUsername()).enterPassword(account.getPassword()).submitLogin();
   }
 }

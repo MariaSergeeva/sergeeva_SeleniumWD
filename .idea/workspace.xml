@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcf36d9d-4db8-4c44-ac26-f01b2d0c9b84" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/pageobjects/training/app/Application.class" afterPath="$PROJECT_DIR$/out/test/classes/pageobjects/training/app/Application.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -61,9 +61,11 @@
       <file leaf-file-name="lesson11.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,8 +87,8 @@
       <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/pages/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="39" />
+            <state relative-caret-position="384">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#221#222#0" expanded="true" />
@@ -99,9 +101,24 @@
       <file leaf-file-name="DataProviders.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/model/DataProviders.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="38" />
+            <state relative-caret-position="153">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/model/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="20" />
+              <folding>
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,15 +135,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="97" column="1" lean-forward="true" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
+            <state relative-caret-position="268">
+              <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4008#4009#0" expanded="true" />
-                <element signature="e#4094#4095#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -445,11 +460,12 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/lesson4.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/model/DataProviders.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/NewTestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/pages/Pages.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/model/Account.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/model/DataProviders.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java" />
       </list>
     </option>
@@ -814,34 +830,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="lesson11_newCart - 2018.03.13 at 11h 53m 17s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 13h 54m 00s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.13 at 11h 54m 39s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 13h 56m 37s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.13 at 12h 16m 20s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 13h 56m 58s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.13 at 12h 17m 46s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 13h 57m 35s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.13 at 12h 19m 56s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 14h 03m 02s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.13 at 12h 21m 12s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 14h 06m 00s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.13 at 12h 23m 09s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 14h 08m 25s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.13 at 12h 32m 03s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 14h 10m 56s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.14 at 12h 19m 07s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 14h 12m 53s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="lesson11_newCart - 2018.03.14 at 12h 44m 06s.xml">
+    <history-entry file="lesson11_newCart - 2018.03.14 at 14h 15m 11s.xml">
       <configuration name="lesson11.newCart" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -862,7 +878,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23176761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23176761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2843016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -917,13 +933,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/MyFirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="100" lean-forward="false" selection-start-line="19" selection-start-column="82" selection-end-line="20" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -942,6 +951,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -978,7 +990,7 @@
         <state relative-caret-position="646">
           <caret line="44" column="84" lean-forward="true" selection-start-line="44" selection-start-column="84" selection-end-line="44" selection-end-column="84" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,6 +1028,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1145,6 +1160,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1167,7 +1185,7 @@
         <state relative-caret-position="-392">
           <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1196,7 +1214,7 @@
         <state relative-caret-position="1190">
           <caret line="79" column="93" lean-forward="false" selection-start-line="79" selection-start-column="78" selection-end-line="79" selection-end-column="93" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1206,7 +1224,7 @@
         <state relative-caret-position="680">
           <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1230,22 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-339">
           <caret line="66" column="27" lean-forward="false" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/model/DataProviders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1274,8 +1276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="384">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#221#222#0" expanded="true" />
@@ -1284,14 +1286,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/model/DataProviders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="97" column="1" lean-forward="true" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/tests/lesson11.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4008#4009#0" expanded="true" />
-            <element signature="e#4094#4095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/app/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobjects/training/model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="20" />
+          <folding>
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
           </folding>
         </state>
       </provider>

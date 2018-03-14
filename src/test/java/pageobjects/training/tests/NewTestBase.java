@@ -2,8 +2,10 @@ package pageobjects.training.tests;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.*;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import pageobjects.training.app.Application;
+import pageobjects.training.pages.LoginPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +16,7 @@ import static com.google.common.io.Files.copy;
 
 public class NewTestBase {
   public static ThreadLocal<Application> tlApp = new ThreadLocal<>();
-  public Application app;
+  public static Application app;
 
   @Before
   public void start(){

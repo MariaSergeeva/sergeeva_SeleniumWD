@@ -1,11 +1,14 @@
 package pageobjects.training.app;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageobjects.training.pages.LoginPage;
+import pageobjects.training.pages.Pages;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.attributeContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.not;
@@ -14,14 +17,21 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 public class Application {
   public EventFiringWebDriver driver;
   private WebDriverWait wait;
+  private LoginPage loginPage;
 
   public Application(){
     driver = new EventFiringWebDriver(new ChromeDriver());
     wait = new WebDriverWait(driver, 10);
+    loginPage = new LoginPage(driver);
   }
 
   public void quit() {
     driver.quit();
+  }
+
+
+  public LoginPage loginPage() {
+    return loginPage;
   }
 
 
@@ -83,9 +93,6 @@ public class Application {
     System.out.println(0);
   }
   public void login(){
-    driver.get("http://localhost/litecart/admin/login.php");
-    driver.findElement(By.xpath("//input[@name='username']")).sendKeys("admin");
-    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin");
-    driver.findElement(By.xpath("//button[@name='login']")).click();
+    loginPage.open().enterUsername("admin").enterPassword("admin").submitLogin();
   }
 }

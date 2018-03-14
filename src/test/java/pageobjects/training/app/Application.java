@@ -47,24 +47,24 @@ public class Application {
   }
 
   public void goToCart() {
-    productPage.cart().click();
+    productPage.cart.click();
     wait.until(ExpectedConditions.visibilityOf(cartPage.removeButton()));
   }
 
   public void addProductToCart(int productsCount) {
     for (int i = 0; i < productsCount; i++) {
-      mainPage.openMainPage().getFirstProduct().click();
-      wait.until(ExpectedConditions.visibilityOf(productPage.addButton()));
-      wait.until(ExpectedConditions.visibilityOf(productPage.productsInCartCount()));
+      mainPage.openMainPage().getFirstProduct.click();
+      wait.until(ExpectedConditions.visibilityOf(productPage.addButton));
+      wait.until(ExpectedConditions.visibilityOf(productPage.productsInCartCount));
 
-      String countString = productPage.productsInCartCount().getAttribute("textContent");
+      String countString = productPage.productsInCartCount.getAttribute("textContent");
       int count = Integer.parseInt(countString);
       System.out.println(count);
 
-      productPage.addButton().click();
-      wait.until(not(attributeContains(productPage.productsInCartCount(), "textContent", countString)));
+      productPage.addButton.click();
+      wait.until(not(attributeContains(productPage.productsInCartCount, "textContent", countString)));
 
-      int newCount = Integer.parseInt(productPage.productsInCartCount().getAttribute("textContent"));
+      int newCount = Integer.parseInt(productPage.productsInCartCount.getAttribute("textContent"));
       Assert.assertEquals(newCount, count + 1);
       System.out.println(newCount);
     }
